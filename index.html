@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>DevDetective</title>
+</head>
+
+<body>
+    <div class="h-[100vh] bg-gray-50 flex justify-center items-center wrapper">
+        <div class="w-[90%] max-w-[500px]">
+
+            <div class="flex justify-between mb-4">
+                <h1 class="text-xl font-bold text-blue-900" data-heading>DevDetective</h1>
+                <button onclick="switchMode()" class="flex gap-2 items-center">
+                    <span class="text-xs font-bold text-blue-900 tracking-wide" data-mode>DARK</span>
+                    <i class="fa-solid fa-moon fa-md" data-modeIcon></i>
+                </button>
+            </div>
+
+            <div class="px-4 mb-4 h-[55px] bg-white rounded-md flex justify-between items-center shadow-xl"
+                data-searchBox>
+                <i class="fa-solid fa-magnifying-glass pr-2 text-blue-500"></i>
+                <input class="border-none outline-none w-full bg-white" placeholder="Enter a GitHub username..."
+                    data-searchInp>
+                <button onclick="fetchUserGitHubInfo()"
+                    class="px-5 py-2 ml-5 text-white bg-blue-500 rounded-md border-none">Search</button>
+            </div>
+
+            <!-- userIfo -->
+            <div class="p-6 rounded-md bg-white shadow-xl flex gap-5" data-userInfo>
+                <!-- image -->
+                <img class="rounded-full w-[100px] h-[100px]" src="./Images/20231029_183740.jpg" data-userImg>
+
+                <!-- user details -->
+                <div class="w-full flex flex-col justify-between">
+                    <div class="flex justify-between items-center">
+                        <h1 class="text-xl font-bold text-blue-900" data-username>Jugnu Gupta</h1>
+                        <p class="text-xs font-bold opacity-75" data-joiningDate>Joined 15 Jan 2021</p>
+                    </div>
+                    <a class="text-xs text-blue-500 font-bold block underline mb-5" href="jugnugupta@gmail.com"
+                        data-email>@jugnugupta</a>
+                    <p class="mb-5 text-xs font-bold opacity-70" data-bio>Not Available</p>
+
+                    <!-- stats -->
+                    <div class="p-4 mb-5 flex justify-between text-center bg-gray-50" data-userStats>
+                        <div>
+                            <p class="text-xs font-bold opacity-70">Repos</p>
+                            <p class="text-lg font-bold" data-repos>15</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold opacity-70">Followers</p>
+                            <p class="text-lg font-bold" data-followers>20</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold opacity-70">Following</p>
+                            <p class="text-lg font-bold" data-following>5</p>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-4 grid-cols-2">
+                        <div class="flex gap-1 items-center">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p class="text-xs font-bold" data-location>New Delhi</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/jugnu-gupta" class="text-xs font-bold underline"
+                                data-github>GitHub</a>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/jugnugupta33/" class="text-xs font-bold underline"
+                                data-linkedin>linkedin</a>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <i class="fa-solid fa-building"></i>
+                            <p class="text-xs font-bold" data-company>Not Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
